@@ -1,0 +1,78 @@
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+
+
+  /*prova*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* prova */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+}
+/* EO prova */
+
+/* ============================
+   IMAGE WRAPPER CON RATIO-BOX
+   ============================ */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Rapporto 1:1 (quadrato) */
+.ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Rapporto 4:3 (rettangolare) */
+.ratio-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+/* Nessun bisogno di ulteriore styling sull'immagine:
+   Next.js gestisce tutto con fill + object-fit */
+
+.card-body{
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.card-body h3 {
+  color: var(--root-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+

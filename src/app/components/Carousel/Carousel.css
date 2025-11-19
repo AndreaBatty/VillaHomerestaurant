@@ -1,0 +1,138 @@
+.carousel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.carousel--loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #ccc;
+  font-size: 1.25rem;
+}
+
+.carousel__loading-text {
+  animation: blink 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Slides */
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Gradiente fade */
+.carousel-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+
+
+
+
+
+/* Fade tra le immagini */
+/* @keyframes carouselFade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+} */
+
+/* SLIDES — versione CSS only */
+/* .carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: carouselFade calc(var(--slide-count) * 5s) linear infinite;
+  animation-delay: calc(var(--i) * 5s);
+}
+
+.carousel-slide:first-child {
+  opacity: 1 !important;
+} */
+
+
+
+
+
+
+
+
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Skeleton shimmer effect */
+
+.carousel-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f2f2f2 25%, #e3e3e3 50%, #f2f2f2 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  z-index: 2; /* sopra le immagini */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

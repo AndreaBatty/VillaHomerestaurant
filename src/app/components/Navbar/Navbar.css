@@ -1,0 +1,170 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.75rem;
+  background-color: var(--root-color, #96b03a);
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+/* --- NAV DESKTOP --- */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* --- BRAND / LOGO --- */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px;
+}
+
+.logo span {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.logo span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover span::before,
+.logo:focus span::before {
+  transform: scaleX(1);
+}
+
+/* --- HAMBURGER BUTTON --- */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  padding: 0.75rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav-links a,
+.mobile-drawer a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.mobile-drawer {
+  display: none;
+}
+
+/* --- MOBILE MENU --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Nasconde il menu desktop */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Drawer laterale (nuovo menu mobile) */
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 320px;
+    height: 100%;
+    background-color: #f9f9f4; /* 🔹 sfondo coerente */
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    transition: right 0.35s ease-in-out;
+    z-index: 999;
+  }
+
+  .mobile-drawer.open {
+    right: 0;
+  }
+
+  .mobile-drawer li {
+    list-style: none;
+  }
+
+  .mobile-drawer a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-drawer a:hover,
+  .mobile-drawer a:focus {
+    color: var(--root-color, #96b03a);
+  }
+
+  /* Overlay dietro il menu */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998;
+  }
+
+  .mobile-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+}

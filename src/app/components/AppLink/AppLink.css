@@ -1,0 +1,47 @@
+
+
+.app-link {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.app-link--text {
+  background: none;
+  border: none;
+  color: var(--root-color);
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.app-link--text:hover,
+.app-link--text:focus {
+  color: #7b932e;
+  text-decoration: none;
+}
+
+.app-link--button {
+  display: inline-block;
+  background-color: var(--root-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app-link--button:hover,
+.app-link--button:focus {
+  background-color: #7b932e;
+}
+
+.app-link--nav {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-link--nav:hover,
+.app-link--nav:focus {
+  text-decoration: underline;
+}

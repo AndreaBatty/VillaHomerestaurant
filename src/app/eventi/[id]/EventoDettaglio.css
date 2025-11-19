@@ -1,0 +1,48 @@
+:root {
+  --text-dark: #222;
+  --text-light: #f8f8f8;
+}
+
+.evento-date {
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* DETTAGLI */
+.evento-dettaglio .evento-desc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.evento-extra {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.evento-extra h3 {
+  color: var(--root-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evento-hero {
+    height: 50vh;
+  }
+
+  .evento-hero__overlay {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .evento-hero h1 {
+    font-size: 1.8rem;
+  }
+}

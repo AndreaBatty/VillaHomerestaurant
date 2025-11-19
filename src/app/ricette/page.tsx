@@ -1,0 +1,121 @@
+import "./Ricette.css";
+import RicetteList from "./RicetteList";
+import HeroStatic from "../components/HeroStatic/HeroStatic";
+import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
+
+export default function Ricette() {
+  const dishes = [
+    {
+      id: 1,
+      title: "Risotto agli asparagi",
+      description:
+        "Un piatto cremoso e profumato con asparagi freschi, mantecato con burro e parmigiano.",
+      ingredients: [
+        "Riso Carnaroli",
+        "Asparagi freschi",
+        "Burro",
+        "Parmigiano Reggiano",
+        "Brodo vegetale",
+        "Scorza di limone",
+        "Sale e pepe",
+        "Riso Carnaroli",
+        "Asparagi freschi",
+        "Burro",
+        "Parmigiano Reggiano",
+        "Brodo vegetale",
+        "Scorza di limone",
+        "Sale e pepe",
+        "Riso Carnaroli",
+        "Asparagi freschi",
+        "Burro",
+        "Parmigiano Reggiano",
+        "Brodo vegetale",
+        "Scorza di limone",
+        "Sale e pepe","Riso Carnaroli",
+        "Asparagi freschi",
+        "Burro",
+        "Parmigiano Reggiano",
+        "Brodo vegetale",
+        "Scorza di limone",
+        "Sale e pepe",
+        
+      ],
+      image: "/images/piatto1.webp",
+    },
+    {
+      id: 2,
+      title: "Filetto di branzino al forno",
+      description:
+        "Cotto lentamente con erbe aromatiche e scorza di limone, servito con verdure di stagione.",
+      ingredients: [
+        "Filetto di branzino",
+        "Timo e rosmarino freschi",
+        "Olio extravergine di oliva",
+        "Limone",
+        "Verdure di stagione",
+        "Sale marino",
+      ],
+      image: "/images/piatto2.webp",
+    },
+    {
+      id: 3,
+      title: "Tagliata di manzo con rucola",
+      description:
+        "Una classica tagliata servita con scaglie di parmigiano e olio extravergine locale.",
+      ingredients: [
+        "Controfiletto di manzo",
+        "Rucola fresca",
+        "Scaglie di parmigiano",
+        "Olio extravergine di oliva",
+        "Sale e pepe",
+      ],
+      image: "/images/piatto3.webp",
+    },
+    {
+      id: 4,
+      title: "Crostata ai frutti di bosco",
+      description:
+        "Un dolce artigianale con pasta frolla fragrante e confettura fatta in casa.",
+      ingredients: [
+        "Farina 00",
+        "Burro",
+        "Zucchero",
+        "Uova",
+        "Confettura di frutti di bosco",
+        "Scorza di limone",
+      ],
+      image: "/images/piatto1.webp",
+    },
+  ];
+
+  return (
+    <>
+      <HeroStatic
+        title="Le nostre ricette"
+        subtitle="Piatti genuini preparati con ingredienti locali e passione casalinga."
+        backgroundImage="/images/ricette.jpg"
+        overlay="dark"
+        align="center"
+      />
+
+      <SectionWrapper
+        id="menu-stagionale"
+        title="Menù stagionale"
+        align="center"
+      >
+        <p>
+          Il nostro menù cambia con le stagioni per valorizzare i migliori
+          ingredienti locali del momento. Ogni piatto nasce da un equilibrio tra
+          tradizione e creatività, offrendo un’esperienza sempre diversa ma dal
+          gusto autentico.
+        </p>
+      </SectionWrapper>
+
+      <RicetteList dishes={dishes} />
+
+    
+
+      {/* <RicetteList dishes={dishesProva} /> */}
+    </>
+  );
+}

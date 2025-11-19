@@ -1,0 +1,104 @@
+
+
+.contatti-page {
+  width: 100%;
+  padding-inline: var(--padding-x);
+  
+  color: #333;
+
+}
+
+.contatti-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contatti-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--root-color);
+  margin-bottom: 1rem;
+}
+
+.contatti-info {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  background-color: #f9f9f4;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.info-list li {
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: var(--root-color);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+.contact-link:focus {
+  outline-offset: 2px;
+  outline: 2px solid #00f;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.75rem;
+}
+
+.social-links a {
+  color: var(--root-color);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  transform: scale(1.1);
+  color: #7b8d2f;
+}
+
+.mappa-wrapper {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Accessibilità */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contatti-page {
+    padding-inline: 5%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

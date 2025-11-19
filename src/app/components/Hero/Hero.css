@@ -1,0 +1,99 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px; /* garantisce stabilità del layout */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* padding: 0 5%; */
+  color: #ffffff;
+  background-color: #000; /* fallback */
+}
+
+/* --- BACKGROUND --- */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero__slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s ease-in-out; /* ← qui la transizione tra le slide */
+}
+
+.hero__slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- GRADIENTE: CHIARO → SCURO --- */
+.hero__fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* --- CONTENUTO --- */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 40rem;
+  text-align: right;
+}
+
+.hero__content h1 {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero__content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero__cta:hover,
+.hero__cta:focus {
+  background-color: #0056b3;
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding: 0 1.5rem;
+  }
+
+  .hero__content {
+    text-align: center;
+    max-width: 100%;
+  }
+}
