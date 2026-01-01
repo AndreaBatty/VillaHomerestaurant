@@ -10,7 +10,7 @@ const Footer: FC = () => {
         </h2>
 
         <address className="footer-address" translate="no">
-          <strong>Villa Verde Agency</strong><br />
+          <strong>Villa Tiziana</strong><br />
           Via delle Magnolie 42<br />
           50100 Firenze (FI), Italia
         </address>

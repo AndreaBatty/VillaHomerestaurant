@@ -1,5 +1,3 @@
-
-
 import AppLink from "../components/AppLink/AppLink";
 import HeroStatic from "../components/HeroStatic/HeroStatic";
 import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
@@ -56,7 +54,7 @@ export default function Eventi() {
         headingLevel="h2"
       >
         <p>
-          A <strong>Villa Homerestaurant</strong> organizziamo eventi unici,
+          A <strong>Villa Tiziana</strong> organizziamo eventi unici,
           pensati per chi ama il buon cibo e la convivialità. Ogni serata ha un
           tema, un menù dedicato e una storia da raccontare.
         </p>

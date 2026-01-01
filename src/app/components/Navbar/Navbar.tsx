@@ -12,7 +12,7 @@ interface NavLink {
 
 const links: NavLink[] = [
   { to: "/", label: "Home" },
-  { to: "/ricette", label: "Ricette" },
+  { to: "/menu", label: "Menu" },
   { to: "/eventi", label: "Eventi" },
   { to: "/contatti", label: "Contatti" },
 ];
@@ -47,12 +47,12 @@ export default function Navbar() {
           <Link href="/" onClick={handleClose}>
             <Image
               src={logo}
-              alt="Villa Homerestaurant"
+              alt="Villa Tiziana"
               style={{ width: "60px", height: "60px" }}
             />
           </Link>
           <Link href="/" className="logo" onClick={handleClose}>
-            Villa Homerestaurant
+            Villa Tiziana
           </Link>
         </div>
 

@@ -17,7 +17,7 @@ export default function Hero() {
       <Carousel data={images} />
 
       <div className="hero__content container">
-        <h1 id="hero-heading">Benvenuti a Villa Homerestaurant</h1>
+        <h1 id="hero-heading">Benvenuti a Villa Tiziana</h1>
         <p>Cucina casalinga di stagione e del territorio.</p>
       </div>
     </section>

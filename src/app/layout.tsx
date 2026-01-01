@@ -5,7 +5,7 @@ import Footer from "@/app/components/Footer/Footer";
 import "./globals.css";
 
 export const metadata = {
-  title: "Villa Homerestaurant",
+  title: "Villa Tiziana",
   description: "Cena casalinga in un ambiente intimo e accogliente. Scopri il nostro home restaurant con cucina genuina, piatti stagionali e atmosfera familiare.",
 };
 

@@ -7,7 +7,7 @@ export const eventi = [
       "Una serata estiva all'aperto con menù degustazione a base di prodotti locali e musica dal vivo.",
     details: `Il nostro giardino si trasforma in un ristorante sotto il cielo estivo,...`,
     image: "/images/v1.webp",
-    location: "Villa Homerestaurant, Via delle Rose 12, Verona",
+    location: "Villa Tiziana, Via delle Rose 12, Verona",
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ export const eventi = [
       "Scopri i sapori della stagione con una selezione di vini regionali accompagnati da finger food e formaggi.",
     details: `Un’esperienza sensoriale dedicata agli amanti del vino...`,
     image: "/images/v2.webp",
-    location: "Villa Homerestaurant, Via delle Rose 12, Verona",
+    location: "Villa Tiziana, Via delle Rose 12, Verona",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ export const eventi = [
       "Un menù speciale per la vigilia, con piatti della tradizione e un’atmosfera calda e familiare.",
     details: `Un'atmosfera intima e famigliare con piatti della tradizione natalizia...`,
     image: "/images/v3.webp",
-    location: "Villa Homerestaurant, Via delle Rose 12, Verona",
+    location: "Villa Tiziana, Via delle Rose 12, Verona",
     
   }
 ];

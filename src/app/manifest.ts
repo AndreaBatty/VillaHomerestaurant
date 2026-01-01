@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Villa Homerestaurant",
-    short_name: "Villa Homerestaurant",
-    description: "A blog site for a homerestaurant",
+    name: "Villa Tiziana",
+    short_name: "Villa Tiziana",
+    description: "A blog site for a Tiziana",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
