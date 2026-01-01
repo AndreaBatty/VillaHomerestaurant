@@ -6,25 +6,25 @@ import CarouselProva from "./components/CarouselProva/CarouselProva";
   const images = [
     {
       
-      image: "/images/piatto1.webp",
-      title: "Piatto della casa",
-      
-    },
-    {
-      
-      image: "/images/piatto2.webp",
+      image: "/images/cheesecake.webp",
       title: "Dettaglio gastronomico",
       
     },
     {
       
-      image: "/images/piatto3.webp",
+      image: "/images/crostini.webp",
       title: "Dettaglio gastronomico",
       
     },
     {
       
-      image: "/images/v1.webp",
+      image: "/images/filetto.webp",
+      title: "Dettaglio gastronomico",
+      
+    },
+    {
+      
+      image: "/images/garganelli.webp",
       title: "Dettaglio gastronomico",
       
     },

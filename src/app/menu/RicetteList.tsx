@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
 import CardSkeleton from "../components/CardSkeleton/CardSkeleton";
-import Dialog from "../components/Dialog/Dialog";
 import { StaticImageData } from "next/image";
-import CardProva from "../components/CardProva/CardProva";
+import Card from "../components/Card/Card";
 
 // Tipi dei piatti (adatta ai tuoi dati reali)
 export interface Dish {
@@ -21,33 +20,7 @@ interface IRicetteListProps {
 }
 
 export default function RicetteList({ dishes }: IRicetteListProps) {
-  const [selectedId, setSelectedId] = useState<number | string | null>(null);
-  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-
-  // Ref tipizzato correttamente
-  const refDialog = useRef<HTMLDialogElement | null>(null);
-
-  // Trova il piatto selezionato
-  const selectedDish = dishes.find((dish) => dish.id === selectedId);
-
-  // Controllo apertura modale
-  useEffect(() => {
-    const dialog = refDialog.current;
-    if (!dialog) return;
-
-    if (open) {
-      dialog.showModal();
-      document.body.style.overflow = "hidden";
-    } else {
-      dialog.close();
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
 
   // Simula caricamento iniziale
   useEffect(() => {
@@ -57,15 +30,6 @@ export default function RicetteList({ dishes }: IRicetteListProps) {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleOpenDialog = (id: number | string) => {
-    setSelectedId(id);
-    setOpen(true);
-  };
-
-  const handleCloseDialog = () => {
-    setOpen(false);
-  };
 
   return (
     <>
@@ -81,8 +45,7 @@ export default function RicetteList({ dishes }: IRicetteListProps) {
                 <CardSkeleton key={i} />
               ))
             : dishes.map((dish) => (
-                <CardProva
-                  onClick={() => handleOpenDialog(dish.id)}
+                <Card
                   key={dish.id}
                   role="button"
                   tabIndex={0}
@@ -96,23 +59,6 @@ export default function RicetteList({ dishes }: IRicetteListProps) {
 
 
       </SectionWrapper>
-
-      {selectedDish && (
-        <Dialog
-          ref={refDialog}
-          onClose={handleCloseDialog}
-          title={selectedDish.title}
-        >
-          <p style={{marginBottom: '0.5rem'}}>{selectedDish.description}</p>
-
-          <h4>Ingredienti:</h4>
-          <ul>
-            {selectedDish.ingredients.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </Dialog>
-      )}
     </>
   );
 }

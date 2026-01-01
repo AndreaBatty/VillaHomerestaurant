@@ -1,0 +1,21 @@
+.eventsnotfound-wrapper {
+  width: 100%;
+  padding: 5rem 8%;
+  color: var(--text-dark);
+}
+
+
+/* Titolo */
+.eventsnotfound-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  /* border-left: 6px solid var(--root-color);
+  padding-left: 1rem; */
+}
+
+.eventsnotfound-content {
+    text-align: center;
+}

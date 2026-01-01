@@ -1,22 +1,22 @@
 import { ReactNode, KeyboardEvent } from "react";
-import "./CardProva.css";
+import "./Card.css";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 
-interface ICardProvaProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string | ReactNode;
   image: string | StaticImageData;
 }
 
-export default function CardProva({
+export default function Card({
   title,
   description,
   image,
   onClick,
   children,
   ...rest
-}: ICardProvaProps) {
+}: ICardProps) {
   // Tastiera attiva SOLO se la card è interattiva (cioè se onClick è presente)
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (!onClick) return;
