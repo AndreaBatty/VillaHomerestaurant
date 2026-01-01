@@ -1,41 +1,13 @@
 import AppLink from "../components/AppLink/AppLink";
 import HeroStatic from "../components/HeroStatic/HeroStatic";
 import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
+import { eventi } from "../lib/eventi";
 import "./Eventi.css";
-
 import EventiLsit from "./EventiList";
 
-const eventi = [
-    {
-      id: 1,
-      title: "Cena sotto le stelle",
-      date: "15 Luglio 2025",
-      description:
-        "Una serata estiva all'aperto con menù degustazione a base di prodotti locali e musica dal vivo.",
-      image: "/images/piatto1.webp",
-    },
-    {
-      id: 2,
-      title: "Degustazione vini d'autunno",
-      date: "10 Ottobre 2025",
-      description:
-        "Scopri i sapori della stagione con una selezione di vini regionali accompagnati da finger food e formaggi.",
-      image: "/images/piatto2.webp",
-    },
-    {
-      id: 3,
-      title: "Cena di Natale in villa",
-      date: "24 Dicembre 2025",
-      description:
-        "Un menù speciale per la vigilia, con piatti della tradizione e un’atmosfera calda e familiare.",
-      image: "/images/piatto3.webp",
-    },
-  ];
 
 export default function Eventi() {
   
-
-
   return (
     <>
       {/* HERO */}

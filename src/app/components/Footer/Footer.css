@@ -55,16 +55,6 @@
   outline-offset: 2px;
 }
 
-/* Bottom note */
-.footer-bottom {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #ccc;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1rem;
-}
-
 /* Screen reader only */
 .sr-only {
   position: absolute;

@@ -13,7 +13,8 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
-  max-width: 400px;
+  width: 100%;
+  max-width: none; /* oppure rimuovi proprio max-width:400px */
 }
 
 .card:hover,

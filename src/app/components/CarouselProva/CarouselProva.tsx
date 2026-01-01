@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./CarouselProva.css";
-import { StaticImageData } from "next/image";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 export interface CarouselProvaItem {
@@ -50,17 +49,6 @@ export default function CarouselProva({ data }: CarouselProvaProps) {
         aria-label="Vai alla slide successiva"
       />
       <span className="indicators">
-        {/* {data.map((_, idx) => {
-          return (
-            <button
-              key={idx}
-              className={
-                slide === idx ? "indicator" : "indicator indicator-inactive"
-              }
-              onClick={() => setSlide(idx)}
-            ></button>
-          );
-        })} */}
       </span>
     </div>
   );

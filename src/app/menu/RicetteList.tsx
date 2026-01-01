@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect } from "react";
 import SectionWrapper from "../components/SectionWrapper/SectionWrapper";
 import CardSkeleton from "../components/CardSkeleton/CardSkeleton";
-import Card from "../components/Card/Card";
 import Dialog from "../components/Dialog/Dialog";
 import { StaticImageData } from "next/image";
 import CardProva from "../components/CardProva/CardProva";
@@ -75,25 +74,6 @@ export default function RicetteList({ dishes }: IRicetteListProps) {
         title="I piatti di questa stagione"
         align="center"
       >
-        {/* <div className="piatti-grid">
-          {loading
-            ? Array.from({ length: dishes.length }).map((_, i) => (
-                <CardSkeleton key={i} />
-              ))
-            : dishes.map((dish) => (
-                <Card
-                  onClick={() => handleOpenDialog(dish.id)}
-                  key={dish.id}
-                  role="button"
-                  tabIndex={0}
-                  title={dish.title}
-                  description={dish.description}
-                  image={dish.image}
-                  variant="ricetta"
-                />
-              ))}
-        </div> */}
-
 
         <div className="piatti-grid">
           {loading
