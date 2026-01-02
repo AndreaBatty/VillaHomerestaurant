@@ -1,4 +1,16 @@
-export const eventi = [];
+import { StaticImageData } from "next/image";
+
+export type Evento = {
+  id: string;
+  title: string;
+  date: string;
+  description: string;
+  details: string;
+  image: string | StaticImageData;
+  location: string;
+};
+
+export const eventi: Evento[] = [];
 
 /* [
   {
