@@ -11,7 +11,7 @@ export default function Ricette() {
       <HeroStatic
         title="Le nostre ricette"
         subtitle="Piatti genuini preparati con ingredienti locali e passione casalinga."
-        backgroundImage="/images/ricette.jpg"
+        backgroundImage="/images/interno_1.webp"
         overlay="dark"
         align="center"
       />

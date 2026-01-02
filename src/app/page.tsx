@@ -6,12 +6,6 @@ import CarouselProva from "./components/CarouselProva/CarouselProva";
   const images = [
     {
       
-      image: "/images/cheesecake.webp",
-      title: "Dettaglio gastronomico",
-      
-    },
-    {
-      
       image: "/images/crostini.webp",
       title: "Dettaglio gastronomico",
       
@@ -24,10 +18,16 @@ import CarouselProva from "./components/CarouselProva/CarouselProva";
     },
     {
       
-      image: "/images/garganelli.webp",
-      title: "Dettaglio gastronomico",
+      image: "/images/interno_1.webp",
+      title: "Interno villa",
       
     },
+    {
+      
+      image: "/images/esterno_1.webp",
+      title: "Esterno villa",
+      
+    }
   ];
 
 export default function Home() {

@@ -14,7 +14,7 @@ export default function Eventi() {
       <HeroStatic
         title="Eventi Speciali"
         subtitle="Cene a tema, degustazioni e serate musicali nella nostra villa."
-        backgroundImage="/images/v1.webp"
+        backgroundImage="/images/esterno_1.webp"
         overlay="dark"
         align="center"
       />

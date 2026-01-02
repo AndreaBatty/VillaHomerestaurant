@@ -1,4 +1,6 @@
-export const eventi = [
+export const eventi = [];
+
+/* [
   {
     id: "1",
     title: "Cena sotto le stelle",
@@ -30,4 +32,4 @@ export const eventi = [
     location: "Villa Tiziana, Via delle Rose 12, Verona",
     
   }
-];
+] */
